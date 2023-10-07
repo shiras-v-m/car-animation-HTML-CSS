@@ -1,0 +1,190 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(183, 183, 183);
+}
+.frame{
+    width: 100%;
+
+    position: relative;
+}
+.sunFrame{
+    position: relative;
+    animation: sunMove 45s infinite;
+}
+.sun{
+    position: absolute;
+    top: -100px;
+    width: 60px;
+    height: 60px;
+    background-color: rgb(255, 208, 0);
+    border-radius: 50% ;
+
+    box-shadow: 0 0 10px rgb(200, 75, 8);
+}
+.line1{
+    position: absolute;
+    top: -120px;
+    width: 5px;
+    height: 15px;
+    transform: rotate(-40deg);
+    background-color: yellow;
+}
+.line2{
+    position: absolute;
+    top: -130px;
+    left: 30px;
+    width: 5px;
+    height: 15px;
+    transform: rotate(0deg);
+    background-color: yellow;
+}
+.line3{
+    position: absolute;
+    top: -120px;
+    left: 60px;
+    width: 5px;
+    height: 15px;
+    transform: rotate(60deg);
+    background-color: yellow;
+}
+.topLines2{
+    transform: rotate(100deg);
+}
+@keyframes sunMove{
+    0%{
+        left: 0;
+    }
+    100%{
+        left: 1250px;
+    }
+}
+.car{
+    z-index: 1;
+    position: absolute;
+    animation: carMove 1.5s infinite ease-in-out;
+
+}
+
+.topPart{
+    border-top-left-radius:10px ;
+    border-top-right-radius:10px ;
+    width: 200px;
+    height: 100px;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.window{
+    width:60px;
+    height: 60px;
+    background-color: blue;
+}
+.bottomPart{
+    position: absolute;
+    top: 100px;
+    left: -50px;
+    border-radius: 30px;
+    width: 350px;
+    height: 100px;
+    background-color: red;
+}
+.lights{
+    width: 15px;
+    height: 40px;
+    background-color: yellow;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px black;
+}
+.tyre1{
+    position: absolute;
+    top: 170px;
+    left: 10px;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.innerTrye{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(170, 170, 170, 0.487);
+}
+.tyre2{
+    position: absolute;
+    top: 170px;
+    left: 190px;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.road{
+
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    top: 150px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(25, 21, 21);
+    }
+.whiteLine{
+
+    width: 80px;
+    height: 20px;
+    background-color: whitesmoke;
+    animation: lineMove 2s infinite;
+}
+
+
+@keyframes carMove{
+    0%{
+        left: -300px;
+    }
+    100%{
+        left: 1360px;
+    }
+}
+@keyframes lineMove{
+    0%{
+        margin-left: 0;
+    }
+    100%{
+        margin-left: 150px;
+    }
+}
+
+.copyright{
+    position: fixed;
+    bottom: 0;
+
+}
+.copyrightTxt{
+    color: rgb(91, 91, 91);
+    text-shadow: 0 0 10px black ;
+}
